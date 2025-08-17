@@ -1,35 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="app-container">
-        <header>
-            <img src="assets/reshot-icon-weather-8CKJB9YN7X.svg" alt="weather-logo" width="50px" height="50px">
-            <form action="GET">
-                <input type="search" name="location" id="location-search" placeholder="location" required>
-                <button type="button" id="searchBtn">Search</button>
-            </form>
-        </header>
-        <main>
-            <div id="weather-container" class="hidden">
-                <div id="current-conditions">
-                    <div>
-                        <p id="location-name">Davao City</p>
-                        <p id="temp">32°C</p>
-                        <p id="conditions">Rain, Partially cloudy</p>
-                    </div>
-                    <p><span id="feelslike">FEELS LIKE: 39.1°C</span> <span id="precipation-prob">PRECIPATION PROBABILITY: 100%</span>WINDSPEED: 11.2 kph<span id="windspeed"></span></p>
-
-                </div>
+      <header>
+        <div>
+          <img
+            src="asset/reshot-icon-weather-8CKJB9YN7X.svg"
+            alt="weather-logo"
+            width="50px"
+            height="50px"
+          />
+          <span>WEATHER APP</span>
+        </div>
+        <form>
+          <input
+            type="search"
+            name="location"
+            id="location-search"
+            placeholder="location"
+            required
+          />
+          <button type="submit" id="searchBtn">Search</button>
+        </form>
+      </header>
+      <main>
+        <div id="weather-container" class="hidden">
+          <div id="current-conditions">
+            <div class="top">
+              <h2 id="location-name">Davao City</h2>
+              <p id="date">Sunday, 17 Aug</p>
             </div>
-        </main>
-        <footer>
-            <!-- <p>Reshot</p> -->
-        </footer>
+
+            <div class="mid">
+              <div>
+                <img src="#" alt="weather-img" />
+              </div>
+              <div>
+                <p id="temp">32°C</p>
+                <p id="conditions">Rain, Partially cloudy</p>
+              </div>
+            </div>
+
+            <div class="bot">
+              <div id="feelslike">
+                <span>FEELS LIKE</span> <span>39.1°C</span>
+              </div>
+              <div id="precipation-prob">
+                <span>RAIN CHANCE</span> <span>100%</span>
+              </div>
+              <div id="windspeed">
+                <span>WIND SPEED</span> <span>11.2 kph</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="forecast">
+            <div>
+              <img src="#" alt="weather-img" />
+              <p class="temp">TEMP</p>
+              <p class="description">Description</p>
+            </div>
+            <div>
+              <img src="#" alt="weather-img" />
+              <p class="temp">TEMP</p>
+              <p class="description">Description</p>
+            </div>
+            <div>
+              <img src="#" alt="weather-img" />
+              <p class="temp">TEMP</p>
+              <p class="description">Description</p>
+            </div>
+            <div>
+              <img src="#" alt="weather-img" />
+              <p class="temp">TEMP</p>
+              <p class="description">Description</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- <footer>
+        <p>Reshot</p>
+      </footer> -->
     </div>
-</body>
+  </body>
 </html>
