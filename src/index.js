@@ -1,5 +1,6 @@
 import './styles.css';
 import icons from './weather-icons-svgs';
+import { renderCurrentWeather, renderForecast } from './renderWeather';
 
 const search = document.getElementById('location-search');
 const form = document.querySelector('form');
@@ -28,15 +29,7 @@ form.addEventListener('submit', (e) => {
 
   e.preventDefault();
   getWeather(search.value).then((response) => {
-    console.log(
-      response,
-      //   response.currentConditions,
-      //   response.days[1],
-      //   response.days[2],
-      //   response.days[3],
-      //   response.resolvedAddress,
-    );
+    renderCurrentWeather(response);
+    renderForecast(response);
   });
 });
-
-console.log(icons);
