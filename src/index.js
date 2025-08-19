@@ -1,6 +1,5 @@
 import './styles.css';
-import icons from './weather-icons-svgs';
-import { renderCurrentWeather, renderForecast } from './renderWeather';
+import { renderCurrentWeather, renderError } from './renderWeather';
 
 const search = document.getElementById('location-search');
 const form = document.querySelector('form');
@@ -17,7 +16,7 @@ async function getWeather(location) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error(error);
+    console.log(error);
     return error;
   }
 }
@@ -28,8 +27,11 @@ form.addEventListener('submit', (e) => {
   }
 
   e.preventDefault();
-  getWeather(search.value).then((response) => {
-    renderCurrentWeather(response);
-    renderForecast(response);
-  });
+  getWeather(search.value)
+    .then((response) => {
+      renderCurrentWeather(response);
+    })
+    .catch((response) => {
+      renderError();
+    });
 });

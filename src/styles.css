@@ -28,19 +28,19 @@ header div {
 }
 
 #weather-container {
-  width: 1000px;
   height: 720px;
-  border: 1px solid black;
-  margin: 0 auto 20px;
-  border-radius: 8px;
+
   padding: 20px;
 }
 
 #current-conditions {
   text-align: center;
   height: 460px;
-  border: 1px solid black;
+  width: 1000px;
+  margin: 0 auto 20px;
+  border-radius: 8px;
   margin-bottom: 20px;
+  border: 1px solid black;
 }
 
 .top {
@@ -65,14 +65,16 @@ header div {
   justify-content: center;
   align-items: center;
 }
-.bot > div {
+.bot p {
   width: 33%;
 }
 
 #forecast {
+  width: 1000px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 8px;
+  margin: 0 auto 20px;
 }
 
 #forecast > div {
@@ -82,6 +84,8 @@ header div {
   align-items: center;
   height: 200px;
   border: 1px solid black;
+  border-radius: 8px;
+  row-gap: 8px;
 }
 
 footer {
@@ -97,11 +101,11 @@ footer {
 }
 
 .mid img {
-  width: 430px;
+  width: 200px;
   height: 200px;
 }
 
-.mid div:last-child {
+.mid div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,4 +123,8 @@ footer {
 #forecast img {
   width: 70px;
   height: 70px;
+}
+
+#error-container {
+  text-align: center;
 }
