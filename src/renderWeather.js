@@ -89,7 +89,7 @@ function renderForecast(response) {
   forecastContainer.id = 'forecast';
   weatherContainer.appendChild(forecastContainer);
 
-  for (let i = 1; i < 5; i++) {
+  for (let i = 0; i < 5; i++) {
     const div = document.createElement('div');
     const day = document.createElement('p');
     const img = document.createElement('img');
@@ -114,13 +114,13 @@ function renderForecast(response) {
   }
 }
 
-export function renderError(response) {
+export function renderError(error) {
   const weatherContainer = document.getElementById('weather-container');
   weatherContainer.innerHTML = '';
 
   const div = document.createElement('div');
   div.id = 'error-container';
-  div.textContent = 'No data available. Check your location.';
+  div.textContent = error;
 
   weatherContainer.appendChild(div);
 }
