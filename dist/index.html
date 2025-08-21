@@ -1,27 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-<script defer src="main.js"></script></head>
-<body>
+  <script defer src="main.js"></script></head>
+  <body>
     <div id="app-container">
-        <header>
-            <img src="2db1da1a002983c37298.svg" alt="weather-logo" width="50px" height="50px">
-            <form action="GET">
-                <input type="search" name="location" id="location-search" placeholder="location" required>
-                <button type="button" id="searchBtn">Search</button>
-            </form>
-        </header>
-        <main>
-            <div id="weather-container">
-
-            </div>
-        </main>
-        <footer>
-            <!-- <p>Reshot</p> -->
-        </footer>
+      <header>
+        <div>
+          <img
+            src="2db1da1a002983c37298.svg"
+            alt="weather-logo"
+            width="50px"
+            height="50px"
+          />
+          <span>WEATHER APP</span>
+        </div>
+        <form>
+          <input
+            type="search"
+            name="location"
+            id="location-search"
+            placeholder="location"
+            required
+          />
+          <button type="submit" id="searchBtn">Search</button>
+        </form>
+      </header>
+      <main>
+        <div id="weather-container"></div>
+      </main>
+      <footer
+        style="
+          text-align: center;
+          padding: 15px;
+          font-size: 14px;
+          color: #001f3f;
+        "
+      >
+        © 2025 WeatherApp · Built by Marlon Ilao · Made for The Odin Project
+      </footer>
     </div>
-</body>
+  </body>
 </html>
